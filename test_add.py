@@ -15,7 +15,7 @@ class AddTestCase(unittest.TestCase):
         """
         Check a simple addition with add function
         """
-        self.assertEqual(add(2, 2), 4)
+        self.assertEqual(add(2, 2), 5)
 
 
 if __name__ == '__main__':
