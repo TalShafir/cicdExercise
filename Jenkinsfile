@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python -m pip install --user --upgrade pip'
-                sh 'python -m pip install --user pylint'
+                sh 'python -m pip install --upgrade pip'
+                sh 'python -m pip install pylint'
                 sh 'pylint ./*.py'
                 sh 'python -m unittest discover .'
             }
