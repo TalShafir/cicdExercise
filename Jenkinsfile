@@ -1,5 +1,11 @@
 pipeline {
-    agent { docker { image 'python:rc-alpine3.12' } }
+    agent {
+        docker
+        {
+            image 'python:rc-alpine3.12'
+            args '-u root:sudo'
+        }
+    }
     stages {
         stage('build') {
             steps {
