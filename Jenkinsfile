@@ -3,12 +3,12 @@ pipeline {
         docker
         {
             image 'python:3.8'
+            args '-u root:root'
         }
     }
     stages {
         stage('build') {
             steps {
-                sh 'whoami'
                 sh 'python -m pip install --upgrade pip'
                 sh 'python -m pip install pylint'
                 sh 'pylint ./*.py'
