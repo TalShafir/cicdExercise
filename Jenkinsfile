@@ -3,7 +3,7 @@ pipeline {
         docker
         {
             image 'python:rc-alpine3.12'
-            args '-u root:sudo'
+            args '-u root:root'
         }
     }
     stages {
